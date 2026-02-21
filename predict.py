@@ -42,7 +42,7 @@ def show():
             marital = st.selectbox("Marital Status", [0, 1, 2],
                                    format_func=lambda x: ["Single", "Married", "Divorced"][x])
 
-        predict_clicked = st.button("⚡ Predict Churn Risk")
+        predict_clicked = st.button(" Predict Churn Risk")
 
     with col_right:
         st.markdown("#### Prediction Result")
@@ -72,7 +72,8 @@ def show():
             pct = prob * 100
             color = "#f87171" if label == 1 else "#4fd1c5"
             css_class = "result-churn" if label == 1 else "result-safe"
-            emoji = "⚠️" if label == 1 else "✅"
+            icon = "wrong.png" if label == 1 else "like.png"
+            st.image(icon, width=80)
             verdict = "High Churn Risk" if label == 1 else "Likely to Stay"
 
             st.markdown(f"""
@@ -131,7 +132,7 @@ def show():
             st.markdown("""
             <div style='background:#111827; border:1px dashed #1e3a5f; border-radius:12px;
                         padding: 48px 24px; text-align:center; color:#374151;'>
-                <div style='font-size:2.5rem; margin-bottom:12px;'>🎯</div>
+                <div style='font-size:2.5rem; margin-bottom:12px;'><img src="decision-making.png" width="60"></div>
                 <div style='color:#4b5563'>Fill in customer details and click<br><strong style='color:#4fd1c5'>Predict Churn Risk</strong></div>
             </div>
             """, unsafe_allow_html=True)
