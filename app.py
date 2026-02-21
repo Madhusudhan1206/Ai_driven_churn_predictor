@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="ChurnSight | Customer Churn Prediction",
-    page_icon="business-model.png",
+    page_icon="business-model(1).png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
