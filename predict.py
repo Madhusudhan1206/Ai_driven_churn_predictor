@@ -73,6 +73,7 @@ def show():
             color = "#f87171" if label == 1 else "#4fd1c5"
             css_class = "result-churn" if label == 1 else "result-safe"
             icon = "wrong.png" if label == 1 else "like.png"
+            emoji = "⚠️" if label == 1 else "✅"
             st.image(icon, width=80)
             verdict = "High Churn Risk" if label == 1 else "Likely to Stay"
 
